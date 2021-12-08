@@ -1,0 +1,22 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.2.0
+  - smartcontractkit/chainlink-brownie-contracts@0.2.1
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.2.0'
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@0.2.1'
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
+networks:
+    default: kovan 
+    kovan:
+      gas_price: 100000000000
+      dai_token: '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa'
+      dai_usd_price_feed: '0x777A68032a88E5A84678A77Af2CD65A7b3c0775a'
+    mainnet:
+      dai_token: '0x6b175474e89094c44da98b954eedeac495271d0f'
+      dai_usd_price_feed: '0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9'
+      gas_price: 990000000000
+    
